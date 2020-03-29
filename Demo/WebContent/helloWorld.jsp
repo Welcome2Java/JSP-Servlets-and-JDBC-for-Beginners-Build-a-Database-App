@@ -11,7 +11,7 @@
 			HTML code
 			Java code
 			HtML code
-		html result
+		html response
 		Browser
 
 	Where to place the jsp file? 
@@ -21,16 +21,13 @@
 
   -->
 
-
-
-
   <%@page import="java.util.Date"%>
   <html>
       <body>
           <h3>Hello World of Java</h3>
           <!--create new data object--> 
           
-              The time on the server is <%=new Date() %>
+              The time on the server is <%=new java.util.Date() %>
           <!-- output included in HTML page -->
       </body>
   
