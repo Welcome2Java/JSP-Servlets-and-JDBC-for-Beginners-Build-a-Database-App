@@ -1,0 +1,37 @@
+<!-- Lets create an html form -->
+
+<html>
+	<head><title>Student Registration Form</title></head>
+	<body>
+		<form action="student-response.jsp">
+		<!-- First Name creates the next for it while the input creates the input text box in which will be assigned to firstName -->
+			First Name: <input type="text" name="firstName" />
+			<br/><br/>
+			Last Name: <input type="text" name="lastName" />
+			<br/><br/>
+			
+			<!-- creating a drop down list -->
+			Country <select name = "Country">
+						<option>Brazil</option>
+						<option>South Korea</option>
+						<option>China</option>
+						<option>Japan</option>
+						<option>India</option>
+						<option>Germany</option>
+						<option>Merica</option>
+					</select>
+			<br/><br/>
+			Gender <select name = "Gender">
+						<option>Male</option>
+						<option>Female</option>
+						<option>Undefined</option>
+					</select>
+			<br/><br/>
+			<!--creating a submit button-->
+			<input type="submit" value="Submit">
+			
+	
+		
+		</form>
+	</body>
+</html>
