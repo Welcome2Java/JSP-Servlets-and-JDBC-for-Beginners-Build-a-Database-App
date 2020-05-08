@@ -12,7 +12,7 @@
 
 	
 	<input type="button" value="Add Card" 
-				   onclick="window.location.href='add-card-form.jsp'; return false;"
+				   onclick="window.location.href='add-nicfit.jsp'; return false;"
 				   class="add-card-button">
 	<table border="1" cellpadding="10" bordercolor="Black">
 
@@ -27,11 +27,11 @@
 		
 		<c:forEach var="tempNicFit" items="${nicfit_list}">
 		
-		<c:url var="tempLink" value="AlurenServlet">
+		<c:url var="tempLink" value="NicFitServlet">
 				<c:param name="command" value="LOAD"/>
 				<c:param name="NicFitID" value="${tempNicFit.id}"/>
 		</c:url>
-		<c:url var="deleteLink" value="PainterServlet">
+		<c:url var="deleteLink" value="NicFitServlet">
 						<c:param name="command" value="DELETE"/>
 						<c:param name="NicFitID" value="${tempNicFit.id}"/>
 		</c:url>
@@ -55,6 +55,10 @@
 	<p>
 			<a href="PainterServlet"><b>Painter</b></a>
 	</p>
+	<p>
+	<a href="HomePage.html">Home</a>
+	</p>
+
 	
 		
 </body>

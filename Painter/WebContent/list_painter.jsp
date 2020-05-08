@@ -54,4 +54,7 @@
 	<p>
 			<a href="NicFitServlet"><b>Nic Fit</b></a>
 	</p>
+	<p>
+	<a href="HomePage.html">Home</a>
+	</p>
 </body>

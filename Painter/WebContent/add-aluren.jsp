@@ -7,13 +7,13 @@
 	</head>
 
 	<body>
-			<form action="PainterServlet" method="GET">
-				<input type="hidden" name="command" value="ADD" />
+			<form action="AlurenServlet" method="GET">
+				<input type="hidden" name="command" value="ADD_ALuren" />
 				
 				<table border="1">
 					<tbody>
 						<tr>
-							<td><label><b>NamePainter</b></label></td>
+							<td><label><b>NameAluren</b></label></td>
 							<td><input type="text" name="name"/></td>
 						</tr>
 						<tr>

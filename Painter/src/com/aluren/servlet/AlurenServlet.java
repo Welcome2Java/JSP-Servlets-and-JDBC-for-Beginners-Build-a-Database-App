@@ -14,6 +14,7 @@ import javax.sql.DataSource;
 
 import com.aluren.jdbc.Aluren;
 import com.aluren.jdbc.dao.AlruenDAO;
+import com.nicfit.jdbc.Nicfit;
 
 
 /**
@@ -55,9 +56,9 @@ public class AlurenServlet extends HttpServlet {
 			case "List":
 				listDeck(request, response);
 				break;
-//			case "ADD":
-//				addCard(request, response);
-//				break;
+			case "ADD_ALuren":
+				addCard(request, response);
+				break;
 //			case "UPDATE":
 //				updateCard(request, response);
 //				break;
@@ -75,6 +76,21 @@ public class AlurenServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
+    
+
+    private void addCard(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+  		String name = request.getParameter("name");
+  		String type = request.getParameter("type");
+  		int quantity = Integer.valueOf(request.getParameter("quantity"));
+  		String cost = request.getParameter("cost");
+  		String set = request.getParameter("cardSet");
+
+  		Aluren newCard = new Aluren(name, type, quantity, cost, set);
+  		alurenDAO.addCard(newCard);
+
+  		listDeck(request, response);
+  	}
     
     private void listDeck(HttpServletRequest request, HttpServletResponse response) throws Exception {
 

@@ -12,7 +12,7 @@
 
 	
 	<input type="button" value="Add Card" 
-				   onclick="window.location.href='add-card-form.jsp'; return false;"
+				   onclick="window.location.href='add-aluren.jsp'; return false;"
 				   class="add-card-button">
 	<table border="1" cellpadding="10" bordercolor="Black">
 
@@ -31,7 +31,7 @@
 				<c:param name="command" value="LOAD"/>
 				<c:param name="AlurenID" value="${tempAluren.id}"/>
 		</c:url>
-		<c:url var="deleteLink" value="PainterServlet">
+		<c:url var="deleteLink" value="AlurenServlet">
 						<c:param name="command" value="DELETE"/>
 						<c:param name="painterID" value="${tempAluren.id}"/>
 		</c:url>
@@ -55,6 +55,9 @@
 	
 	<p>
 			<a href="PainterServlet"><b>Painter</b></a>
+	</p>
+	<p>
+	<a href="HomePage.html">Home</a>
 	</p>
 		
 </body>

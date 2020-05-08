@@ -7,13 +7,13 @@
 	</head>
 
 	<body>
-			<form action="PainterServlet" method="GET">
+			<form action="NicFitServlet" method="GET">
 				<input type="hidden" name="command" value="ADD" />
 				
 				<table border="1">
 					<tbody>
 						<tr>
-							<td><label><b>NamePainter</b></label></td>
+							<td><label><b>Name</b></label></td>
 							<td><input type="text" name="name"/></td>
 						</tr>
 						<tr>
@@ -26,7 +26,7 @@
 						</tr>
 						<tr>
 							<td><label>Cost</label></td>
-							<td><input type="text" name="cost"/></td>
+							<td><input type="number" name="cost"/></td>
 						</tr>
 						<tr>
 							<td><label>Set</label></td>

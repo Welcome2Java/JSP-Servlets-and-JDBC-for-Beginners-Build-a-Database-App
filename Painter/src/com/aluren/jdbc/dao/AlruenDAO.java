@@ -86,7 +86,7 @@ public class AlruenDAO {
 			statement.setString(2, newCard.getType());
 			statement.setLong(3, newCard.getQuantity());
 			statement.setString(4, newCard.getCost());
-			statement.setString(6, newCard.getCardSet());
+			statement.setString(5, newCard.getCardSet());
 			
 			statement.execute();
 			

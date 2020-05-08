@@ -16,6 +16,7 @@ import com.aluren.jdbc.Aluren;
 import com.aluren.jdbc.dao.AlruenDAO;
 import com.nicfit.jdbc.Nicfit;
 import com.nicfit.jdbc.dao.NicFitDAO;
+import com.painter.jdbc.Painter;
 
 /**
  * Servlet implementation class NicFitServlet
@@ -56,9 +57,9 @@ public class NicFitServlet extends HttpServlet {
 			case "List":
 				listDeck(request, response);
 				break;
-//			case "ADD":
-//				addCard(request, response);
-//				break;
+			case "ADD":
+				addCard(request, response);
+				break;
 //			case "UPDATE":
 //				updateCard(request, response);
 //				break;
@@ -75,6 +76,20 @@ public class NicFitServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+    
+    private void addCard(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		String name = request.getParameter("name");
+		String type = request.getParameter("type");
+		int quantity = Integer.valueOf(request.getParameter("quantity"));
+		String cost = request.getParameter("cost");
+		String set = request.getParameter("cardSet");
+
+		Nicfit newCard = new Nicfit(name, type, quantity, cost, set);
+		nicFitDAO.addCard(newCard);
+
+		listDeck(request, response);
 	}
     
     private void listDeck(HttpServletRequest request, HttpServletResponse response) throws Exception {
