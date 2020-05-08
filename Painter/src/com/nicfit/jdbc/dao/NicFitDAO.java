@@ -89,7 +89,7 @@ public class NicFitDAO {
 			statement.setString(2, newCard.getType());
 			statement.setLong(3, newCard.getQuantity());
 			statement.setString(4, newCard.getCost());
-			statement.setString(6, newCard.getSet());
+			statement.setString(6, newCard.getCardSet());
 			
 			statement.execute();
 			

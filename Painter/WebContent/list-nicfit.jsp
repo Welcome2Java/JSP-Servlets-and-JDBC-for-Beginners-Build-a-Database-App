@@ -4,11 +4,11 @@
 <html>
 
 <head>
-	<title><h1>Strawberry Shortcake</h1></title>
+	<title><h1>Nic Fit</h1></title>
 </head>
 	
-<body background = "Painter MasterPiece.jpg">>
-<h1>Strawberry Shortcake</h1>
+<body background = "exploer.png">>
+<h1>Nic Fit</h1>
 
 	
 	<input type="button" value="Add Card" 
@@ -25,33 +25,36 @@
 			<th>Action</th>
 		</tr>
 		
-		<c:forEach var="tempPainter" items="${painter_List}">
+		<c:forEach var="tempNicFit" items="${nicfit_list}">
 		
-		<c:url var="tempLink" value="PainterServlet">
+		<c:url var="tempLink" value="AlurenServlet">
 				<c:param name="command" value="LOAD"/>
-				<c:param name="painterID" value="${tempPainter.id}"/>
+				<c:param name="NicFitID" value="${tempNicFit.id}"/>
 		</c:url>
 		<c:url var="deleteLink" value="PainterServlet">
 						<c:param name="command" value="DELETE"/>
-						<c:param name="painterID" value="${tempPainter.id}"/>
+						<c:param name="NicFitID" value="${tempNicFit.id}"/>
 		</c:url>
 		
 			<tr style="background-color: white;">
-				<td><b>${tempPainter.name}</b></td>
-				<td><b>${tempPainter.type}</b></td>
-				<td><b>${tempPainter.quantity}</b></td>
-				<td><b>${tempPainter.cost}</b></td>
-				<td><b>${tempPainter.cardSet}</b></td>
-				<td><a href="${tempLink}">Update</a> | <a  href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this row?')))return false">Delete</a></td>
+				<td><b>${tempNicFit.name}</b></td>
+				<td><b>${tempNicFit.type}</b></td>
+				<td><b>${tempNicFit.quantity}</b></td>
+				<td><b>${tempNicFit.cost}</b></td>
+				<td><b>${tempNicFit.cardSet}</b></td>
+				<td><a href="${tempNicFit}">Update</a> | <a  href="${tempNicFit}" onclick="if(!(confirm('Are you sure you want to delete this row?')))return false">Delete</a></td>
 			</tr>
 		</c:forEach>
 				
-		
+
 	</table>
+
 	<p>
 			<a href="AlurenServlet"><b>Aluren</b></a>
 	</p>
 	<p>
-			<a href="NicFitServlet"><b>Nic Fit</b></a>
+			<a href="PainterServlet"><b>Painter</b></a>
 	</p>
+	
+		
 </body>

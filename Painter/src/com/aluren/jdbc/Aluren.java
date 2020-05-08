@@ -6,23 +6,23 @@ public class Aluren {
 	private String type;
 	private int quantity;
 	private String cost;
-	private String set;
+	private String CardSet;
 	
-	public Aluren(String name, String type, int quantity, String cost, String set) {
+	public Aluren(String name, String type, int quantity, String cost, String CardSet) {
 		this.name = name;
 		this.type = type;
 		this.quantity = quantity;
 		this.cost = cost;
-		this.set = set;
+		this.CardSet = CardSet;
 	}
 
-	public Aluren(int id, String name, String type, int quantity, String cost, String set) {
+	public Aluren(int id, String name, String type, int quantity, String cost, String CardSet) {
 		this.id = id;
 		this.name = name;
 		this.type = type;
 		this.quantity = quantity;
 		this.cost = cost;
-		this.set = set;
+		this.CardSet = CardSet;
 	}
 
 	public int getId() {
@@ -66,12 +66,12 @@ public class Aluren {
 	}
 
 
-	public String getSet() {
-		return set;
+	public String getCardSet() {
+		return CardSet;
 	}
 
-	public void setSet(String set) {
-		this.set = set;
+	public void setCardSet(String set) {
+		this.CardSet = set;
 	}
 
 }
