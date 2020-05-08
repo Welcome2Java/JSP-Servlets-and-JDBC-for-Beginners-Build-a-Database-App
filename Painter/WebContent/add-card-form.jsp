@@ -29,12 +29,8 @@
 							<td><input type="number" name="cost"/></td>
 						</tr>
 						<tr>
-							<td><label>Description</label></td>
-							<td><input type="text" name="description"/></td>
-						</tr>
-						<tr>
 							<td><label>Set</label></td>
-							<td><input type="text" name="CardSet"/></td>
+							<td><input type="text" name="cardSet"/></td>
 						</tr>
 						<tr>
 							<td><label></label></td>
@@ -44,9 +40,5 @@
 				</table> 
 		 
 		 	</form>
-		 	
-		
-			
-	
 	</body>
 </html>

@@ -48,8 +48,7 @@ public class TestServlet extends HttpServlet {
 			while(myRs.next()) {
 				String name = myRs.getString("name");
 				String type = myRs.getString("type");
-				String description = myRs.getString("description");
-				printWriter.println(name + "          " + type + "          " + description);
+				printWriter.println(name + "          " + type);
 			}
 			
 		}catch(Exception e) {
@@ -57,8 +56,4 @@ public class TestServlet extends HttpServlet {
 		}
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	
 }

@@ -1,29 +1,28 @@
-package com.painter.jdbc;
+package com.aluren.jdbc;
 
-public class Painter {
-	
+public class Aluren {
 	private int id;
 	private String name;
 	private String type;
 	private int quantity;
 	private String cost;
-	private String CardSet;
+	private String set;
 	
-	public Painter(String name, String type, int quantity, String cost, String CardSet) {
+	public Aluren(String name, String type, int quantity, String cost, String set) {
 		this.name = name;
 		this.type = type;
 		this.quantity = quantity;
 		this.cost = cost;
-		this.CardSet = CardSet;
+		this.set = set;
 	}
 
-	public Painter(int id, String name, String type, int quantity, String cost, String CardSet) {
+	public Aluren(int id, String name, String type, int quantity, String cost, String set) {
 		this.id = id;
 		this.name = name;
 		this.type = type;
 		this.quantity = quantity;
 		this.cost = cost;
-		this.CardSet = CardSet;
+		this.set = set;
 	}
 
 	public int getId() {
@@ -67,13 +66,12 @@ public class Painter {
 	}
 
 
-	public String getCardSet() {
-		
-		return CardSet;
+	public String getSet() {
+		return set;
 	}
 
-	public void setCardSet(String CardSet) {
-		this.CardSet = CardSet;
+	public void setSet(String set) {
+		this.set = set;
 	}
 
 }
